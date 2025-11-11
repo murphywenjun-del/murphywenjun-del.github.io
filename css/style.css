@@ -1,0 +1,114 @@
+/* === Global Styles === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf4;
+  color: #887d07;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Skip Link === */
+.skip-link {
+  position: absolute;
+  left: 20px;
+  top: auto;
+  background: #d2cccc;
+  color: #11e9d3;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+/* === Header & Navigation === */
+header {
+  background-color: #ffd6a5;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff595e;
+  transform: scale(1.1);
+}
+
+/* === Images === */
+img {
+  border: 3px solid #ffd6a5;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Main Image === */
+.main-image {
+  display: block;
+  margin: 20px auto;
+  width: 60%;
+}
+
+/* === Grid Gallery === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Alternate border style using nth-child */
+.gallery-grid img:nth-child(odd) {
+  border-radius: 30px;
+}
+
+/* === Star Page Flexbox (改小图片, 分列排布) === */
+.star-flex {
+  display: grid; /* 改成 grid，更好控制分列 */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 两列或多列 */
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.star-flex img {
+  width: 0%; /* 每列自适应, 不会过大 */
+  max-width: 150px; /* 控制最大尺寸 */
+  border: 3px solid #ffd6a5;
+  padding: 5px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.star-flex img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 153, 102, 0.5);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background-color: #ffd6a5;
+  padding: 10px;
+  margin-top: 20px;
+}
